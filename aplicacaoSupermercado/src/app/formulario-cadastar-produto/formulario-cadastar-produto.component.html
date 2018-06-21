@@ -1,0 +1,175 @@
+<div class="card text-white text-center mx-auto mt-3  mb-3 transparency" style="">
+  <div class="card-header">Insira as informações a fim de cadastrar o produto</div>
+  <div class="card-body">
+    <h5 class="card-title card-block"></h5>
+
+
+    <form class="">
+      <div class="form-group row">
+
+
+        <div class="col-3"> </div>
+        <form class="col-6">
+          <div class="form-group ">
+            <label for="">
+              <b>Nome</b> do produto:</label>
+            <input type="text" name="" id="" class="form-control" placeholder="" aria-describedby="helpId">
+          </div>
+        </form>
+        <div class="col-3"> </div>
+
+      </div>
+
+      <div class="form-group row">
+
+
+        <div class="col-3"> </div>
+        <form class="col-6">
+          <div class="form-group ">
+            <label for="">
+              <b>Categoria</b> do produto:</label>
+            <div class="form-group">
+              <label for=""></label>
+              <select class="form-control" name="" id="">
+                <option> categoria1</option>
+                <option>categoria2</option>
+                <option>categoria3</option>
+              </select>
+            </div>
+
+
+          </div>
+        </form>
+        <div class="col-3"> </div>
+
+      </div>
+      <div class="form-group row">
+
+
+        <div class="col-3"> </div>
+        <form class="col-6">
+          <div class="form-group ">
+            <label for="">
+              <b>Peso</b> do produto:</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">
+                  <b>Kg</b>
+                </div>
+              </div>
+              <input type="number" class="form-control" id="inlineFormInputGroupUsername" placeholder="">
+            </div>
+          </div>
+        </form>
+        <div class="col-3"> </div>
+
+      </div>
+      <div class="form-group row">
+
+
+        <div class="col-3"> </div>
+        <form class="col-6">
+          <div class="form-group ">
+            <div class="form-group ">
+              <label for="">
+                <b>preço de custo</b> do produto:</label>
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">R$</div>
+                </div>
+                <input type="number" class="form-control" id="inlineFormInputGroupUsername" placeholder="">
+              </div>
+
+            </div>
+          </div>
+        </form>
+        <div class="col-3"> </div>
+
+      </div>
+      <div class="form-group row">
+
+
+        <div class="col-3"> </div>
+        <form class="col-6">
+          <div class="form-group ">
+            <label for="">
+              <b>preço de venda</b> do produto:</label>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <div class="input-group-text">R$</div>
+              </div>
+              <input type="number" class="form-control" id="inlineFormInputGroupUsername" placeholder="">
+            </div>
+
+          </div>
+        </form>
+        <div class="col-3"> </div>
+
+      </div>
+      <div class="form-group row">
+
+
+        <div class="col-3"> </div>
+        <form class="col-6">
+          <div class="form-group ">
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Descrição do produto:</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+
+          </div>
+        </form>
+        <div class="col-3"> </div>
+
+      </div>
+
+      <div class="form-group row">
+
+
+        <div class="col-3"> </div>
+        <form class="col-6">
+
+          <input [(value)]="codigoBarras" (change)="change()" id="valorCodigoBarras" type="text" class="form-control" id="inlineFormInputGroupUsername"
+            placeholder="">
+
+        </form>
+        <div class="col-3"> </div>
+
+      </div>
+
+      <div class="form-group row">
+
+
+        <div class="col-3"> </div>
+        <form class="col-6">
+            <img #imagem [alt]="altCode" [(src)]="codigoEndereco">
+
+        </form>
+        <div class="col-3"> </div>
+
+      </div>
+
+
+      <div class="form-group row">
+
+
+        <div class="col-3"> </div>
+        <form class="col-6">
+          <div class="form-group ">
+            <button type="button" class="btn btn-outline-success btn-lg btn-block">Cadastrar</button>
+
+
+          </div>
+        </form>
+        <div class="col-3"> </div>
+
+      </div>
+
+
+
+
+
+    </form>
+
+  </div>
+</div>

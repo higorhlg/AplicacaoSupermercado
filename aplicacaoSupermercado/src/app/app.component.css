@@ -1,0 +1,7 @@
+.fundo {
+    display:table;
+    width:100%;
+    background-image: url('../../img/background-supermercado.jpg');
+    background-position:center top;
+    height:100px;
+}
