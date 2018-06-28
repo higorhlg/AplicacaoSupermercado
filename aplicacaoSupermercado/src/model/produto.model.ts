@@ -5,12 +5,12 @@ export class Produto{
 
 
     private nome?:string;
-    private categoria:string; 
-    private peso :number;
-    private precoCusto:number;
-    private precoVenda:number;
-    private descricao:string;
-    private barCode:number;
+    private categoria?:string; 
+    private peso?:number;
+    private precoCusto?:number;
+    private precoVenda?:number;
+    private descricao?:string;
+    private barCode?:number;
 
  
 
