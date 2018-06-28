@@ -6,6 +6,7 @@ import { VendasComponent } from './vendas/vendas.component';
 import { TesteComponent } from './teste/teste.component';
 
 export const routes: Routes = [
+
     {
         path: '', component:FormularioCadastarProdutoComponent
     },

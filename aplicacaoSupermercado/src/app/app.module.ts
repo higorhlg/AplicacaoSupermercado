@@ -11,6 +11,9 @@ import { RouterModule } from '@angular/router';
 import { TesteComponent } from './teste/teste.component';
 import { routes } from './app-routing.module';
 
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +24,7 @@ import { routes } from './app-routing.module';
     TesteComponent
   ],
   imports: [
-    
+    FormsModule,      
     BrowserModule,
     RouterModule.forRoot(routes)
   
