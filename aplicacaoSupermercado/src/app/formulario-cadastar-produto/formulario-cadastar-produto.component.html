@@ -15,14 +15,13 @@
               <b>Nome</b> do produto:</label>
             <!-- <input [value]="produto.nome" (input) = "produto.nome=$event.target.value"  type="text" name="" id="" class="form-control" placeholder="" aria-describedby="helpId"> -->
             <input  [(ngModel)] = "produto.nome" type="text" name="nome" id="nome" class="form-control" placeholder="" aria-describedby="helpId">
-                  {{produto | json}}
+                  <!-- {{produto | json}} -->
 
           </div>
         </form>
         <div class="col-3"> </div>
 
       </div>
-
       <div class="form-group row">
 
 
@@ -33,17 +32,17 @@
               <b>Categoria</b> do produto:</label>
             <div class="form-group">
               <label for=""></label>
-              <select class="form-control" name="" id="">
-                <option> categoria1</option>
-                <option>categoria2</option>
-                <option>categoria3</option>
-              </select>
+
+
+              <input  [(ngModel)] = "produto.categoria" type="text" name="categoria" id="categoria" class="form-control" placeholder="" aria-describedby="helpId">
+
+              <!-- {{produto.categoria}} -->
             </div>
 
 
           </div>
         </form>
-        <div class="col-3"> </div>
+        <div cla  ss="col-3"> </div>
 
       </div>
       <div class="form-group row">
@@ -60,7 +59,7 @@
                   <b>Kg</b>
                 </div>
               </div>
-              <input [value]="produto.peso" (input) = "produto.peso=$event.target.value" type="number" class="form-control" id="inlineFormInputGroupUsername" placeholder="">
+              <input [(ngModel)] = "produto.peso" type="number" class="form-control" id="peso" placeholder="" name="peso">
             </div>
           </div>
         </form>
@@ -80,7 +79,7 @@
                 <div class="input-group-prepend">
                   <div class="input-group-text">R$</div>
                 </div>
-                <input [value]="produto.precoCusto" (input) = "produto.precoCusto=$event.target.value" type="number" class="form-control" id="inlineFormInputGroupUsername" placeholder="">
+                <input name="precoCusto" [(ngModel)]="produto.precoCusto" type="number" class="form-control" id="precoCusto" placeholder="">
               </div>
 
             </div>
@@ -101,7 +100,9 @@
               <div class="input-group-prepend">
                 <div class="input-group-text">R$</div>
               </div>
-              <input type="number" class="form-control" id="inlineFormInputGroupUsername" placeholder="">
+
+              
+              <input name="precoVenda" id="precoVenda" [(ngModel)]="produto.precoVenda" type="number" class="form-control" id="inlineFormInputGroupUsername" placeholder="">
             </div>
 
           </div>
@@ -117,9 +118,8 @@
           <div class="form-group ">
             <div class="form-group">
               <label for="exampleFormControlTextarea1">Descrição do produto:</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              <textarea id="descricao" name="descricao"  [(ngModel)] ="produto.descricao" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
             </div>
-
           </div>
         </form>
         <div class="col-3"> </div>
@@ -132,10 +132,11 @@
         <div class="col-3"> </div>
         <form class="col-6">
 
-
-          <input [value]="codigoBarras" (change)="change()" id="valorCodigoBarras" type="text" class="form-control" id="inlineFormInputGroupUsername"
+            
+          <input  [(ngModel)]="produto.barCode" id="barCode" name="barCode" type="text" class="form-control" 
             placeholder="">
-        </form>
+        
+          </form>
         <div class="col-3"> </div>
 
       </div>
