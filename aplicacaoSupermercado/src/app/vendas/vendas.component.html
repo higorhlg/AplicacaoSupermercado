@@ -1,3 +1,99 @@
-<p>
-  vendas works!
-</p>
+<div class="card text-white text-center mx-auto mt-3  mb-3 transparency" style="">
+    <div class="card-header">
+      
+
+<!-- 
+sadsadsa -->
+    </div>
+    <div class="card-body">
+
+
+
+        <div class="form-group row">
+  
+  
+            <div class="col-3">
+            </div>
+            <form class="col-6">  
+          <label for=""><b>Nome</b> do produto:</label>
+          <select class="form-control" [(ngModel)]="venda.produto" name="produto" id="produto" (ngModelChange)="atualizaValorVenda()">
+            <option>teste</option>
+            <option>123</option>
+            <option>asdwq1</option>
+          </select>
+        </form>
+        <div class="col-1"> 
+        
+
+        <div class="form-group">
+          <label for="">quantidade</label>
+          <input type="number" [(ngModel)]="venda.quantidade" name="qtd" id="qtd" (ngModelChange)="atualizaValorVenda()"
+            class="form-control"  placeholder="">
+        </div>
+        </div>
+        
+        <div class="col-2"> 
+        
+        
+        
+        </div>
+        
+        
+        
+        </div>
+        
+        
+        
+        
+        
+        <div class="form-group row">
+        
+        
+        
+            
+            <div class="col-8">
+              </div>
+              <form class="col-2">  
+        
+            <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">R$</div>
+                </div>
+                <input [(ngModel)] = "venda.valor" readonly style="background-color:rgba(70, 70, 70, 0.424); " class="text-white"  type="number" class="form-control" id="precoCusto" placeholder="">
+              </div>
+        </form>
+        
+        <div class="col-2"> </div>
+        
+        </div>
+        
+
+
+        {{venda | json}}
+
+
+
+        <div class="form-group row" style="margin-top:10rem;">
+
+
+            <div class="col-3"> </div>
+            <form class="col-6">
+              <div class="form-group ">
+                <button type="button" class="btn btn-outline-success btn-lg btn-block">Cadastrar</button>
+    
+    
+              </div>
+            </form>
+            <div class="col-3"> </div>
+    
+          </div>
+     
+
+          
+
+
+      </div>
+  </div>
+    
+
+

@@ -13,60 +13,52 @@ export class Produto{
     private barCode?:number;
 
  
-
     constructor(){
-        /*this.nome = "";
-        this.categoria = "";
-        this.descricao = "";
-        this.peso = 0;
-        this.precoCusto = 0;
-        this.precoVenda = 0;
-        this.barCode = 0;
-        */
+
     }
 
-    public setnome(nome:string){
+    public setNome(nome:string){
         this.nome=nome;
     }
-    public setcategoria(categoria:string){
+    public setCategoria(categoria:string){
         this.categoria=categoria;
     }
-    public setpeso (peso :number){
+    public setPeso (peso :number){
         this.peso=peso;
     }
-    public setprecoCusto(precoCusto:number){
+    public setPrecoCusto(precoCusto:number){
         this.precoCusto=precoCusto;
     }
-    public setprecoVenda(precoVenda:number){
+    public setPrecoVenda(precoVenda:number){
         this.precoVenda=precoVenda;
     }
-    public setdescricao(descricao:string){
+    public setDescricao(descricao:string){
         this.descricao=descricao;
     }
-    public setbarCode(barCode:number){
+    public setBarCode(barCode:number){
         this.barCode=barCode;
     }
 
 
-    public getnome():string{
+    public getNome():string{
         return this.nome;
     }
-    public getcategoria():string {
+    public getCategoria():string {
         return this.categoria;
     }
-    public getpeso ():number{
+    public getPeso ():number{
         return this.peso;
     }
-    public getprecoCusto():number{
+    public getPrecoCusto():number{
         return this.precoCusto;
     }
-    public getprecoVenda():number{
+    public getPrecoVenda():number{
         return this.precoVenda;
     }
-    public getdescricao():string{
+    public getDescricao():string{
         return this.descricao;
     }
-    public getbarCode():number{
+    public getBarCode():number{
         return this.barCode;
     }
 
