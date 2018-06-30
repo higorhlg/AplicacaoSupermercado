@@ -16,9 +16,9 @@ sadsadsa -->
             </div>
             <form class="col-6">  
           <label for=""><b>Nome</b> do produto:</label>
-          <select class="form-control" [(ngModel)]="venda.produto" name="produto" id="produto" (ngModelChange)="atualizaValorVenda()">
-            <option>teste</option>
-            <option>123</option>
+          <select class="form-control" [(ngModel)]="nomeSelecionado" name="produto" id="produto" (ngModelChange)="atualiza()">
+            <option>batata</option>
+            <option>beterraba</option>
             <option>asdwq1</option>
           </select>
         </form>
@@ -27,7 +27,7 @@ sadsadsa -->
 
         <div class="form-group">
           <label for="">quantidade</label>
-          <input type="number" [(ngModel)]="venda.quantidade" name="qtd" id="qtd" (ngModelChange)="atualizaValorVenda()"
+          <input type="number" [(ngModel)]="venda.quantidade" name="quantidade" id="quantidade" (ngModelChange)="atualiza()"
             class="form-control"  placeholder="">
         </div>
         </div>
@@ -59,7 +59,7 @@ sadsadsa -->
                 <div class="input-group-prepend">
                   <div class="input-group-text">R$</div>
                 </div>
-                <input [(ngModel)] = "venda.valor" readonly style="background-color:rgba(70, 70, 70, 0.424); " class="text-white"  type="number" class="form-control" id="precoCusto" placeholder="">
+                <input [(ngModel)] = "venda.valor" name="valor" readonly style="background-color:rgba(70, 70, 70, 0.424); " class="text-white"  type="number" class="form-control" id="precoCusto" placeholder="">
               </div>
         </form>
         
@@ -69,7 +69,7 @@ sadsadsa -->
         
 
 
-        {{venda | json}}
+        {{venda.produto | json}}
 
 
 
