@@ -153,6 +153,7 @@
 
       </div>
 
+      {{produto | json}}
 
       <div class="form-group row">
 
@@ -160,7 +161,7 @@
         <div class="col-3"> </div>
         <form class="col-6">
           <div class="form-group ">
-            <button type="button" class="btn btn-outline-success btn-lg btn-block">Cadastrar</button>
+            <button type="button" (click)="cadastrar()" name="cadastrar" class="btn btn-outline-success btn-lg btn-block">Cadastrar</button>
 
 
           </div>

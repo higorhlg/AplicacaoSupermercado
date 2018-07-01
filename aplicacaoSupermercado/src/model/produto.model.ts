@@ -3,7 +3,7 @@
 
 export class Produto{
 
-
+    _id?:string;
     nome?:string;
     categoria?:string; 
     peso?:number;

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Produto } from '../../model/produto.model';
+import { ProdutoService } from '../produto.service';
 
 @Component({
   selector: 'app-formulario-cadastar-produto',
@@ -10,18 +11,19 @@ export class FormularioCadastarProdutoComponent implements OnInit {
   
 
 
-  produto: Produto = new Produto;
+  produto: Produto
 
   codigoEndereco ="http://bwipjs-api.metafloor.com/?bcid=code128&text=1234567890&includetext";
-  constructor() {
-   // this.produto = new Produto();
-
-
-
-
+  constructor(private service: ProdutoService) {
+    this.produto = new Produto
 
    }
-
+   cadastrar(){
+    this.service.save(this.produto).subscribe( p =>{
+      alert(`Produto cadastrado no ID ${p._id}`)
+      this.produto = new Produto
+    })
+  }
 
   //  change(){ 
   //   console.log(this.codigoEndereco); 

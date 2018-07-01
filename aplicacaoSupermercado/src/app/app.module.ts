@@ -13,6 +13,8 @@ import { routes } from './app-routing.module';
 
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProdutoService } from './produto.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,10 +28,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   imports: [
     FormsModule,      
     BrowserModule,
-    RouterModule.forRoot(routes)
-  
+    RouterModule.forRoot(routes),
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ProdutoService], 
   bootstrap: [AppComponent]
 })
 export class AppModule { }
