@@ -3,7 +3,9 @@ import { RouterModule, Routes }  from '@angular/router';
 
 import { FormularioCadastarProdutoComponent } from './formulario-cadastar-produto/formulario-cadastar-produto.component';
 import { VendasComponent } from './vendas/vendas.component';
-import { TesteComponent } from './teste/teste.component';
+import { PesquisaComponent } from './pesquisa/pesquisa.component';
+
+
 
 export const routes: Routes = [
 
@@ -12,5 +14,8 @@ export const routes: Routes = [
     },
     {
         path: 'vendas', component:VendasComponent
+    },
+    {
+        path: 'pesquisas', component:PesquisaComponent
     }
 ];

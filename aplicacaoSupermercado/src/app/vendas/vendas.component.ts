@@ -4,6 +4,7 @@ import { Produto } from '../../model/produto.model';
 import { Venda } from '../../model/venda.model';
 import { Produtos } from '../data';
 import { equalSegments } from '@angular/router/src/url_tree';
+import { ProdutoService } from '../produto.service';
 
 @Component({
   selector: 'app-vendas',
@@ -14,7 +15,7 @@ import { equalSegments } from '@angular/router/src/url_tree';
 export class VendasComponent implements OnInit {
 
   venda: Venda = new Venda();
-  produtos: Array<Produto> = Produtos;
+  produtos: Array<Produto>
 
   nomeSelecionado: String;
   atualiza(){
@@ -24,8 +25,12 @@ export class VendasComponent implements OnInit {
      this.venda.setValor(this.venda.getProduto().precoVenda * this.venda.getQuantidade());
 
   }
-  constructor() { }
 
+  constructor(private service:ProdutoService) {
+    this.service.getAll().subscribe( p => {
+      this.produtos = p
+    })
+  }
   ngOnInit() {
   }
 

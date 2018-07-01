@@ -40,7 +40,7 @@ export class Server{
             }
 
 
-            this.application.listen(3000, () =>{
+            this.application.listen(3001, () =>{
                 resolve(this.application)
             })
 

@@ -8,13 +8,14 @@ import { FormularioCadastarProdutoComponent } from './formulario-cadastar-produt
 import { VendasComponent } from './vendas/vendas.component';
 
 import { RouterModule } from '@angular/router';
-import { TesteComponent } from './teste/teste.component';
+
 import { routes } from './app-routing.module';
 
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProdutoService } from './produto.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { PesquisaComponent } from './pesquisa/pesquisa.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     NavBarComponent,
     FormularioCadastarProdutoComponent,
     VendasComponent,
-    TesteComponent
+    PesquisaComponent,
   ],
   imports: [
     FormsModule,      

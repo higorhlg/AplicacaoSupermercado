@@ -14,17 +14,17 @@ export class ProdutoService {
   
   }
   public save(produto:Produto):Observable<Produto>{
-   return this.http.post<Produto>('http://localhost:3000/produto',produto)
+   return this.http.post<Produto>('http://localhost:3001/produto',produto)
   }
   public getAll():Observable<Produto[]>{
-    return this.http.get<Produto[]>('http://localhost:3000/produtos')
+    return this.http.get<Produto[]>('http://localhost:3001/produtos')
   }
   public update(produto:Produto):Observable<Produto>{
-    return this.http.patch<Produto>(`http://localhost:3000/user/${produto._id}`,produto)
+    return this.http.patch<Produto>(`http://localhost:3001/user/${produto._id}`,produto)
   }
   public delete(produto:Produto): Observable<any>{
     
-  return this.http.delete<Produto>(`http://localhost:3000/user/${produto._id}`)
+  return this.http.delete<Produto>(`http://localhost:3001/user/${produto._id}`)
     
   }
 }

@@ -42,7 +42,7 @@ class Server {
                 for (let router of routers) {
                     router.applyRouter(this.application);
                 }
-                this.application.listen(3000, () => {
+                this.application.listen(3001, () => {
                     resolve(this.application);
                 });
                 this.application.on('restifyError', error_handler_1.handleError);
