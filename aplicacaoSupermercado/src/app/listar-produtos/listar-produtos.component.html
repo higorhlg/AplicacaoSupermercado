@@ -1,0 +1,39 @@
+
+
+<div class=" bg-dark">
+    <table class="table table-dark table-hover">
+        <thead>
+          <tr>
+              <th scope="col">nome</th>
+              <th scope="col">categoria</th>
+              <th scope="col">peso</th>
+              <th scope="col">precoCusto</th>
+              <th scope="col">precoVenda</th>
+              <th scope="col">descricao</th>
+              <th scope="col">barCode</th>
+              <th scope="col">unidades     </th>
+    
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let produto of produtos">
+            
+              <td scope="row">{{produto.nome}}</td>
+              <td scope="row">{{produto.categoria}}</td> 
+              <td scope="row">{{produto.peso}}</td>
+              <td scope="row">{{produto.precoCusto}}</td>
+              <td scope="row">{{produto.precoVenda}}</td>
+              <td scope="row">{{produto.descricao}}</td>
+              <td scope="row">{{produto.barCode}}</td>
+              <td scope="row">{{produto.unidades}}</td>
+            
+          </tr>
+        
+        </tbody>
+</table>
+    
+     
+
+        
+      
+    </div>

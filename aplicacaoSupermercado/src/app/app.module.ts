@@ -16,6 +16,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProdutoService } from './produto.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { PesquisaComponent } from './pesquisa/pesquisa.component';
+import { ListarProdutosComponent } from './listar-produtos/listar-produtos.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { PesquisaComponent } from './pesquisa/pesquisa.component';
     FormularioCadastarProdutoComponent,
     VendasComponent,
     PesquisaComponent,
+    ListarProdutosComponent,
   ],
   imports: [
     FormsModule,      

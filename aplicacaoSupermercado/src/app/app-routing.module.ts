@@ -4,6 +4,7 @@ import { RouterModule, Routes }  from '@angular/router';
 import { FormularioCadastarProdutoComponent } from './formulario-cadastar-produto/formulario-cadastar-produto.component';
 import { VendasComponent } from './vendas/vendas.component';
 import { PesquisaComponent } from './pesquisa/pesquisa.component';
+import { ListarProdutosComponent } from './listar-produtos/listar-produtos.component';
 
 
 
@@ -16,6 +17,6 @@ export const routes: Routes = [
         path: 'vendas', component:VendasComponent
     },
     {
-        path: 'pesquisas', component:PesquisaComponent
+        path: 'listarProdutos', component:ListarProdutosComponent
     }
 ];
