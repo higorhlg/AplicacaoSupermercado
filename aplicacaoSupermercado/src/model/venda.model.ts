@@ -4,7 +4,7 @@ import { Produto } from "./produto.model";
 
 export class Venda{
 
-
+    _id:object
     private produto?:Produto;
     private quantidade?:number;
     private valor?:number;

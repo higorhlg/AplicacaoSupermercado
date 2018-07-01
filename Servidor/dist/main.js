@@ -2,8 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const server_1 = require("./server/server");
 const produto_router_1 = require("./produto/produto.router");
+const venda_router_1 = require("./venda/venda.router");
 const server = new server_1.Server;
-server.bootstrap([produto_router_1.produtoRouter]).then(server => {
+server.bootstrap([produto_router_1.produtoRouter, venda_router_1.vendaRouter]).then(server => {
     console.log(`servidor executando na porta ${server.application.address().port}`);
 }).catch(error => {
     console.log(`Servidor não inicializou ..  ${error}`);

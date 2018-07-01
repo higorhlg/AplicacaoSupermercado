@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { VendasComponent } from '../vendas/vendas.component';
-import { Venda } from '../../model/venda.model';
 import { Produto } from '../../model/produto.model';
 import { ProdutoService } from '../produto.service';
 
@@ -11,7 +9,6 @@ import { ProdutoService } from '../produto.service';
 })
 export class ListarProdutosComponent implements OnInit {
 
-  venda: Venda = new Venda();
   produtos: Array<Produto>
 
 

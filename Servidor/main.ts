@@ -1,10 +1,11 @@
 
 import {Server} from './server/server'
 import { produtoRouter } from './produto/produto.router';
+import { vendaRouter } from './venda/venda.router';
 
 const server:Server = new Server
 
-server.bootstrap([produtoRouter]).then( server => {
+server.bootstrap([produtoRouter, vendaRouter]).then( server => {
    
     console.log(`servidor executando na porta ${server.application.address().port}`)
 }).catch( error =>{
