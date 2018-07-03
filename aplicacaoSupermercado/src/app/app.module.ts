@@ -6,6 +6,7 @@ import { ContainerDeFundoComponent } from './container-de-fundo/container-de-fun
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FormularioCadastarProdutoComponent } from './formulario-cadastar-produto/formulario-cadastar-produto.component';
 import { VendasComponent } from './vendas/vendas.component';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { RouterModule } from '@angular/router';
 
@@ -28,7 +29,8 @@ import { VendaService } from './venda.service';
     ListarProdutosComponent,
   ],
   imports: [
-    FormsModule,      
+    AngularFontAwesomeModule,
+    FormsModule,
     BrowserModule,
     RouterModule.forRoot(routes),
     HttpClientModule
