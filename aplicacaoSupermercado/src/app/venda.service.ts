@@ -20,11 +20,11 @@ export class VendaService {
     return this.http.get<Venda[]>('http://localhost:3001/vendas')
   }
   public update(venda:Venda):Observable<Venda>{
-    return this.http.patch<Venda>(`http://localhost:3001/produto/${venda._id}`,venda)
+    return this.http.patch<Venda>(`http://localhost:3001/venda/${venda._id}`,venda)
   }
   public delete(venda:Venda): Observable<any>{
     
-  return this.http.delete<Venda>(`http://localhost:3001/produto/${venda._id}`)
+  return this.http.delete<Venda>(`http://localhost:3001/venda/${venda._id}`)
     
   }
 }

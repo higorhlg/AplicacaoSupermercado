@@ -14,7 +14,7 @@ export class Server{
 
     initializeDb(): any{
         (<any>mongoose).Promise = global.Promise  // comando obrigatório
-        return mongoose.connect('mongodb://apiuser:apiuser1@ds125031.mlab.com:25031/mercadoteste')
+        return mongoose.connect('mongodb://localhost:27017/mercado')
 
     }
 
