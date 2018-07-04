@@ -5,6 +5,7 @@ export interface Produto extends mongoose.Document{
     nome: string,
     categoria: string,
     descricao: string,
+    icms:number,
     barCode: number,
     peso: number,
     precoCusto: number,
@@ -21,6 +22,9 @@ const produtoSchema = new mongoose.Schema({
     },
     descricao:{
         type: String,
+    },
+    icms:{
+        type: Number,
     },
     barCode:{
         type: Number,

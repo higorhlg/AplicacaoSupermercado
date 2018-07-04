@@ -6,14 +6,15 @@
           <tr>
               <th scope="col">nome</th>
               <th scope="col">categoria</th>
+              <th scope="col">icms</th>
               <th scope="col">peso</th>
               <th scope="col">precoCusto</th>
               <th scope="col">precoVenda</th>
               <th scope="col">descricao</th>
               <th scope="col">barCode</th>
               <th scope="col">unidades </th>
-              <th scope="col">alterar</th>
-              <th scope="col"><fa name="cog" animation="spin"></fa>excluir </th>
+              <th scope="col"></th>
+              <th scope="col"></th>
     
           </tr>
         </thead>
@@ -22,21 +23,92 @@
             
               <td scope="row">{{produto.nome}}</td>
               <td scope="row">{{produto.categoria}}</td> 
+              <td scope="row">{{produto.icms}}</td> 
               <td scope="row">{{produto.peso}}</td>
               <td scope="row">{{produto.precoCusto}}</td>
               <td scope="row">{{produto.precoVenda}}</td>
               <td scope="row">{{produto.descricao}}</td>
               <td scope="row">{{produto.barCode}}</td>
               <td scope="row">{{produto.unidades}}</td>
-              <td scope="row"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></td>
-              <td scope="row">x</td>
+              <td scope="row">
+                    <span (click)="alt(produto)" data-toggle="modal" data-target="#modalAltera" ><fa name="pencil"></fa></span>
+                </td>
+              <td scope="row">
+                  <span routerLink="vendas" (click)="deletar(produto)"><fa name="trash"></fa></span>
+                </td>
           </tr>
         
         </tbody>
 </table>
     
-     
 
-        
       
     </div>
+
+    <div class="modal fade" id="modalAltera" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h4 class="modal-title w-100 font-weight-bold">Alterar</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body mx-3">
+                        <div class="md-form mb-5">
+                            <label for="">
+                                <b>Nome</b> do produto:</label>
+                                    <!-- <input [value]="produto.nome" (input) = "produto.nome=$event.target.value"  type="text" name="" id="" class="form-control" placeholder="" aria-describedby="helpId"> -->
+                                <input [(ngModel)] = "selecionado.nome" type="text" name="nome" id="nome" class="form-control" placeholder="" aria-describedby="helpId">
+                        </div>
+        
+                        <div class="md-form mb-5">
+                            <label for="">
+                                    <b>Categoria</b> do produto:</label>
+                                    <input  [(ngModel)] = "selecionado.categoria" type="text" name="categoria" id="categoria" class="form-control" placeholder="" aria-describedby="helpId">
+                        </div>
+
+                        <div class="md-form mb-5">
+                                <label for="">
+                                        <b>Descricao</b> do produto:</label>
+                                        <input  [(ngModel)] = "selecionado.descricao" type="text" name="categoria" id="categoria" class="form-control" placeholder="" aria-describedby="helpId">
+                            </div>
+
+                        <div class="md-form mb-5">
+                                <label for="">
+                                        <b>Preco</b> venda do produto:</label>
+                                        <input  [(ngModel)] = "selecionado.precoVenda" type="text" name="categoria" id="categoria" class="form-control" placeholder="" aria-describedby="helpId">
+                            </div>
+                        <div class="md-form mb-5">
+                                <label for="">
+                                        <b>Preco</b> custo do produto:</label>
+                                        <input  [(ngModel)] = "selecionado.precoCusto" type="text" name="categoria" id="categoria" class="form-control" placeholder="" aria-describedby="helpId">
+                            </div>
+                            <div class="md-form mb-5">
+                                    <label for="">
+                                        <b>Peso</b> do produto:</label>
+                                            <!-- <input [value]="produto.nome" (input) = "produto.nome=$event.target.value"  type="text" name="" id="" class="form-control" placeholder="" aria-describedby="helpId"> -->
+                                        <input [(ngModel)] = "selecionado.peso" type="text" name="nome" id="nome" class="form-control" placeholder="" aria-describedby="helpId">
+                                </div>
+                
+                                <div class="md-form mb-5">
+                                    <label for="">
+                                            <b>barCode</b> do produto:</label>
+                                            <input  [(ngModel)] = "selecionado.barCode" type="text" name="categoria" id="categoria" class="form-control" placeholder="" aria-describedby="helpId">
+                                </div>
+        
+                                <div class="md-form mb-5">
+                                        <label for="">
+                                                <b>Unidades</b> do produto:</label>
+                                                <input  [(ngModel)] = "selecionado.unidades" type="text" name="categoria" id="categoria" class="form-control" placeholder="" aria-describedby="helpId">
+                                    </div>
+                    </div>
+                    
+                    <div class="modal-footer d-flex justify-content-center">
+                        <button (click) ="alterar()" class="btn btn-default" data-dismiss="modal">Alterar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        

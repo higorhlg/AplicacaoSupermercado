@@ -6,6 +6,7 @@ export class Produto{
     _id?:string;
     nome?:string;
     categoria?:string; 
+    icms?:number;
     peso?:number;
     precoCusto?:number;
     precoVenda?:number;

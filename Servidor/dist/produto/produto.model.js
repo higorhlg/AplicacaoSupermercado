@@ -14,6 +14,9 @@ const produtoSchema = new mongoose_1.default.Schema({
     descricao: {
         type: String,
     },
+    icms: {
+        type: Number,
+    },
     barCode: {
         type: Number,
     },
